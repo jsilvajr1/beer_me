@@ -1,5 +1,7 @@
 from django.db import models
 
+
+
 class User(models.Model):
     user_name = models.CharField(max_length=255)
     password = models.CharField(max_length=10)
@@ -18,7 +20,7 @@ class Beer(models.Model):
         return self.beer_name
 
 class Cellar(models.Model):
-    beer = models.ForeignKey(Beer, on_delete=models.CASCADE, related_name='beers')
+    beer = models.ForeignKey(Beer, on_delete=models.CASCADE, related_name='beer')
 
 
 class Profile(models.Model):
